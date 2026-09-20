@@ -14,8 +14,8 @@ const JWT_SECRET = process.env.JWT_SECRET || 'greathora_secret_key_2026';
 app.use(cors());
 app.use(express.json());
 
-// Serve static images from client public folder
-app.use('/images', express.static(path.join(__dirname, '../client/public/images')));
+// Serve static images from frontend public folder
+app.use('/images', express.static(path.join(__dirname, '../frontend/public/images')));
 
 // Helper middleware for auth
 function authenticateToken(req, res, next) {
